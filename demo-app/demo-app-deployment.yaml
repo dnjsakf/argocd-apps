@@ -18,3 +18,5 @@ spec:
         image: dnjsakf/demo/1.0.8-dev
         ports:
         - containerPort: 8080
+      imagePullSecrets:
+      - name: regcred
