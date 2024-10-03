@@ -14,5 +14,4 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 8080
-    nodePort: 3000
-
+    nodePort: 30080 # The range of valid ports is 30000-32767
