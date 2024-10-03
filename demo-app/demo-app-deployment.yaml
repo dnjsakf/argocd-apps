@@ -16,7 +16,7 @@ spec:
       imagePullSecrets:
       - name: regcred
       containers:
-      - name: demo-app
-        image: dnjsakf/demo/1.0.9-dev
+      - name: webapp
+        image: dnjsakf/demo:1.0.9-dev
         ports:
         - containerPort: 8080
