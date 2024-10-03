@@ -12,7 +12,5 @@ spec:
   ports:
   - name: http
     protocol: TCP
-    port: 8090
+    port: 8080
     targetPort: 8080
-    # nodePort: 30080 # The range of valid ports is 30000-32767
-    # port: 80
