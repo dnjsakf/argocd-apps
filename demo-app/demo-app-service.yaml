@@ -8,7 +8,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app.kubernetes.io/name: argocd-server
+    app: demo-app
   sessionAffinity: None
   ports:
   - name: http
