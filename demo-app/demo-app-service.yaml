@@ -6,9 +6,18 @@ metadata:
     app: demo-app
   namespace: default
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
-    app: demo-app
+    app.kubernetes.io/name: argocd-server
+  sessionAffinity: None
   ports:
-  - port: 80
+  - name: http
+    nodePort: 38080
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  - name: https
+    nodePort: 38443
+    port: 443
+    protocol: TCP
     targetPort: 8080
