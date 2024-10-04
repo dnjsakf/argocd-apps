@@ -19,4 +19,4 @@ spec:
             name: demo-app
             port:
               name: http
-              number: 8080
+              number: 4080
