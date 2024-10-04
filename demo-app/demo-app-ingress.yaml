@@ -5,10 +5,12 @@ metadata:
     app.kubernetes.io/instance: init-demo-app
   name: demo-app-ingress
   namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   ingressClassName: nginx
   rules:
-  - host: localhost
+  - host: local.demo.com
     http:
       paths:
       - path: /
