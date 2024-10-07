@@ -20,10 +20,6 @@ spec:
             name: demo-app-service
             port:
               number: 8080
-
-  - host: localhost
-    http:
-      paths:
       - path: /guestbook
         pathType: Prefix
         backend:
@@ -31,9 +27,6 @@ spec:
             name: guestbook-ui
             port:
               number: 80
-  - host: localhost
-    http:
-      paths:
       - path: /api/user
         pathType: Prefix
         backend:
@@ -41,9 +34,6 @@ spec:
             name: demo-user-api-service
             port:
               number: 9092
-  - host: localhost
-    http:
-      paths:
       - path: /api/manage
         pathType: Prefix
         backend:
