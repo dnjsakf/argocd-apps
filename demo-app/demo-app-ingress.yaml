@@ -29,7 +29,7 @@ spec:
           service:
             name: demo-user-api-service
             port:
-              number: 82
+              number: 80
   - host: localhost
     http:
       paths:
@@ -39,7 +39,7 @@ spec:
           service:
             name: demo-manage-api-service
             port:
-              number: 81
+              number: 80
   - host: localhost
     http:
       paths:
