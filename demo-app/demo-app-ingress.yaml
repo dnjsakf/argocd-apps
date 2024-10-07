@@ -23,7 +23,7 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /api/user/*
+      - path: /api/user
         pathType: Prefix
         backend:
           service:
@@ -33,7 +33,7 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /api/manage/*
+      - path: /api/manage
         pathType: Prefix
         backend:
           service:
