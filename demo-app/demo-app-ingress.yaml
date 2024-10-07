@@ -23,6 +23,26 @@ spec:
   - host: localhost
     http:
       paths:
+      - path: /api/user
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-user-api-service
+            port:
+              number: 80
+  - host: localhost
+    http:
+      paths:
+      - path: /api/manage
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-manage-api-service
+            port:
+              number: 80
+  - host: localhost
+    http:
+      paths:
       - path: /guestbook
         pathType: Prefix
         backend:
