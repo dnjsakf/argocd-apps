@@ -40,13 +40,3 @@ spec:
             name: demo-manage-api-service
             port:
               number: 80
-  - host: localhost
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: demo-app-service
-            port:
-              number: 80
