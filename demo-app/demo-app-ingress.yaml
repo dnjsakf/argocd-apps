@@ -13,11 +13,11 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /
+      - path: /guestbook
         pathType: Prefix
         backend:
           service:
-            name: demo-app-service
+            name: guestbook-ui
             port:
               number: 80
   - host: localhost
@@ -43,10 +43,10 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /guestbook
+      - path: /
         pathType: Prefix
         backend:
           service:
-            name: guestbook-ui
+            name: demo-app-service
             port:
               number: 80
