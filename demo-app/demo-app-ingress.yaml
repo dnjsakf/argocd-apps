@@ -13,6 +13,17 @@ spec:
   - host: localhost
     http:
       paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-app-service
+            port:
+              number: 8080
+
+  - host: localhost
+    http:
+      paths:
       - path: /guestbook
         pathType: Prefix
         backend:
@@ -40,13 +51,3 @@ spec:
             name: demo-manage-api-service
             port:
               number: 9092
-  - host: localhost
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: demo-app-service
-            port:
-              number: 8080
