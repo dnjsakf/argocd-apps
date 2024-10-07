@@ -29,7 +29,7 @@ spec:
           service:
             name: demo-user-api-service
             port:
-              number: 80
+              number: 9092
   - host: localhost
     http:
       paths:
@@ -39,7 +39,7 @@ spec:
           service:
             name: demo-manage-api-service
             port:
-              number: 80
+              number: 9092
   - host: localhost
     http:
       paths:
@@ -49,4 +49,4 @@ spec:
           service:
             name: demo-app-service
             port:
-              number: 80
+              number: 8080
