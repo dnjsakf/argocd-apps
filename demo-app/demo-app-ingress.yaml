@@ -19,7 +19,7 @@ spec:
           service:
             name: demo-app-service
             port:
-              number: 8080
+              number: 80
       - path: /guestbook
         pathType: Prefix
         backend:
@@ -33,11 +33,11 @@ spec:
           service:
             name: demo-user-api-service
             port:
-              number: 9092
+              number: 80
       - path: /api/manage
         pathType: Prefix
         backend:
           service:
             name: demo-manage-api-service
             port:
-              number: 9092
+              number: 80
