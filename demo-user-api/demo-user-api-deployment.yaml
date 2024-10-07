@@ -8,11 +8,11 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: demo-user-api
+      app: demo-user-api-deploy
   template:
     metadata:
       labels:
-        app: demo-user-api
+        app: demo-user-api-deploy
     spec:
       imagePullSecrets:
       - name: regcred
