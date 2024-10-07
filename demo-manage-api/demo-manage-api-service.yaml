@@ -4,7 +4,7 @@ metadata:
   name: demo-manage-api-service
   namespace: default
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: demo-manage-api
   ports:
