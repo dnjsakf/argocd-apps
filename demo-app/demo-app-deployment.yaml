@@ -18,6 +18,6 @@ spec:
       - name: regcred
       containers:
       - name: webapp
-        image: dnjsakf/demo-app:1.0.55-dev
+        image: dnjsakf/demo-app:1.0.57-dev
         ports:
         - containerPort: 8080
