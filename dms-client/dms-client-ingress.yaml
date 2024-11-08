@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-app-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-app-service
+            port:
+              number: 80
+      - path: /guestbook
+        pathType: Prefix
+        backend:
+          service:
+            name: guestbook-ui
+            port:
+              number: 80
+      - path: /api/user
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-user-api-service
+            port:
+              number: 80
+      - path: /api/manage
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-manage-api-service
+            port:
+              number: 80
