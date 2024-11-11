@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dms-server-deploy
+  namespace: default
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: dms-server
+  template:
+    metadata:
+      labels:
+        app: dms-server
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: webapp
+        image: dnjsakf/dms-server:1.0.0-dev
+        ports:
+        - containerPort: 80
