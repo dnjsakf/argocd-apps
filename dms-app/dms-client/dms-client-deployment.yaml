@@ -17,7 +17,7 @@ spec:
       imagePullSecrets:
       - name: regcred
       containers:
-      - name: webapp
+      - name: dms-client
         image: dnjsakf/dms-client:1.0.25-dev
         ports:
         - containerPort: 80
