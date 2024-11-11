@@ -13,14 +13,14 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /api
+      - path: /dms-server
         pathType: Prefix
         backend:
           service:
             name: dms-server-service
             port:
               number: 80
-      - path: /
+      - path: /dms-client
         pathType: Prefix
         backend:
           service:
