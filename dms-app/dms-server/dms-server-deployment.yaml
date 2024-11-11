@@ -21,3 +21,6 @@ spec:
         image: dnjsakf/dms-server:1.0.7-dev
         ports:
         - containerPort: 3000
+        env:
+          - name: REDIS_URL
+            value: "redis://redis-service.default.svc.cluster.local:6379"
