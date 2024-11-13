@@ -26,5 +26,4 @@ spec:
             value: "redis://localhost:6379"
           - name: DB_POSTGRES_HOST
             value: "localhost"
-          - name: DB_POSTGRES_PORT
-            value: 5432
+        
