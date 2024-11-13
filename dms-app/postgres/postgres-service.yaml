@@ -4,8 +4,8 @@ metadata:
   name: postgres-service
   namespace: default
 spec:
-  type: ExternalName
-  externalName: dev.dms-app.com
+  selector:
+    app: redis
   ports:
     - protocol: TCP
       port: 5432
