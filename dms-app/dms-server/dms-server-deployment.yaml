@@ -22,16 +22,15 @@ spec:
         ports:
         - containerPort: 3000
         env:
-          - name: EXPRESS_HOST
-            value: localhost
-          - name: EXPRESS_PORT
-            value: "3000"
           - name: REDIS_URL
-            # value: "redis://redis-service.default.svc.cluster.local:6379"
-            value: "redis://redis-service:6379"
+            valueFrom:
+              configMapKeyRef:
+                name: redis-config
+                key: REDIS_URL
           - name: DB_POSTGRES_HOST
-            # value: "postgres-service.default.svc.cluster.local"
-            value: "postgres-service"
-          - name: DB_POSTGRES_PORT
-            value: "5432"
+            valueFrom:
+              configMapKeyRef:
+                name: postgres-config
+                key: DB_POSTGRES_PORT
+
         
