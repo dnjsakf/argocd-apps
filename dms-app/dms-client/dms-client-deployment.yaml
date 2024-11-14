@@ -18,7 +18,7 @@ spec:
       - name: regcred
       containers:
       - name: dms-client
-        image: dnjsakf/dms-client:1.0.29-dev
+        image: dnjsakf/dms-client:1.0.30-dev
         ports:
         - containerPort: 80
     
