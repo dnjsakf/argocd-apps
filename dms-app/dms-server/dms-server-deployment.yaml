@@ -25,12 +25,12 @@ spec:
           - name: REDIS_URL
             valueFrom:
               configMapKeyRef:
-                name: redis-config
+                name: dms-app-config
                 key: REDIS_URL
           - name: DB_POSTGRES_HOST
             valueFrom:
               configMapKeyRef:
-                name: postgres-config
+                name: dms-app-config
                 key: DB_POSTGRES_PORT
 
         
