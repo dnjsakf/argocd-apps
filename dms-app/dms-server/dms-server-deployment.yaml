@@ -18,7 +18,7 @@ spec:
       - name: regcred
       containers:
       - name: dms-server
-        image: dnjsakf/dms-server:1.0.8-dev
+        image: dnjsakf/dms-server:1.0.9-dev
         ports:
         - containerPort: 3000
         env:
