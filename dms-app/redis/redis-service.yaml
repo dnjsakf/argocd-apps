@@ -4,10 +4,12 @@ metadata:
   name: redis-service
   namespace: default
 spec:
-  type: NodePort
-  ports:
-    - protocol: TCP
-      port: 6379
-      targetPort: 6379
-      nodePort: 30001
+  type: ExternalName
+  externalName: 192.168.0.61
+  # type: NodePort
+  # ports:
+  #   - protocol: TCP
+  #     port: 6379
+  #     targetPort: 6379
+  #     nodePort: 30001
 
