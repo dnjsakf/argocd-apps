@@ -21,6 +21,4 @@ spec:
         image: dnjsakf/dms-client:1.0.29-dev
         ports:
         - containerPort: 80
-        env:
-        - name: NEXT_PUBLIC_API_BASE_URL
-          value: "http://localhost:8080/api"
+    

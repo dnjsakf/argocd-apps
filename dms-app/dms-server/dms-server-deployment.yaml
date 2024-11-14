@@ -32,5 +32,3 @@ spec:
               configMapKeyRef:
                 name: dms-app-config
                 key: DB_POSTGRES_PORT
-
-        
