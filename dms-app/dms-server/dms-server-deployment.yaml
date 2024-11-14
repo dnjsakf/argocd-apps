@@ -22,6 +22,10 @@ spec:
         ports:
         - containerPort: 3000
         env:
+          - name: EXPRESS_HOST
+            value: localhost
+          - name: EXPRESS_PORT
+            value: "3000"
           - name: REDIS_URL
             # value: "redis://redis-service.default.svc.cluster.local:6379"
             value: "redis://192.168.0.61:6379"
